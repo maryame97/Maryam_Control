@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/util.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/formcss.css">
+<!--===============================================================================================-->
+</head>
+<body>
+    <script src=""></script>
+    
+	<form class=" login100-form validate-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <fieldset class="field"> <span class="login100-form-title">
+          CONTACT
+        </span>
+        
+        <div class="wrap-input100 validate-input" data-validate = "">
+            <input class="input100" type="text" name="nom" placeholder="Nom" [formControl]="nom" >
+            
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "">
+            <input class="input100" type="text" name="prenom" placeholder="Prenom"  [formControl]="prenom">
+            
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+            <input class="input100" type="text" name="email" placeholder="Email" [formControl]="email">
+            
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Phone number is required">
+            <input class="input100" type="tel" name="tel" placeholder="Telephone" [formControl]="telephone">
+           
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+            </span>
+        </div>
+        
+        <div class="container-login100-form-btn">
+            <button type="submit" class="login100-form-btn" [disabled]="formGroup.invalid" >
+                Ajouter
+            </button>
+        </div>
+        </fieldset>
+    </form>
+        <div class="split right list-group">
+
+            <u>LISTES DES CONTACTS:</u>
+            <br>
+            <br>
+            <br>  
+            <ul class="list-group">
+                <li class="list-group-item">Aucun contact</li><br>
+              </ul>
+        </div>
+       
+
+</body>
+</html>
